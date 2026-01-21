@@ -163,7 +163,7 @@ function App() {
                 { id: 'experience', label: 'Experience' },
                 { id: 'projects', label: 'Projects' },
                 { id: 'skills', label: 'Skills' },
-                { id: 'certifications', label: 'Certs' },
+              
                 { id: 'education', label: 'Education' },
                 { id: 'contact', label: 'Contact' }
               ].map((item) => (
