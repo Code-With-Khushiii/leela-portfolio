@@ -145,9 +145,13 @@ function App() {
   { icon: Lightbulb, title: 'Backend, Cloud & DevOps', skills: ['FastAPI', 'Flask', 'REST APIs', 'PostgreSQL', 'MySQL', 'Docker', 'Kubernetes', 'AWS', 'GitHub Actions', 'Prometheus', 'Grafana', 'Linux'] }
 ];
 
-  const certifications = [
-  'AWS Certified Machine Learning Engineer – Associate'
+const certifications = [
+  {
+    name: 'AWS Certified Machine Learning Engineer – Associate',
+    link: 'https://www.credly.com/badges/4946a6fe-a6c8-4576-ae5c-1da043b83b0f'
+  }
 ];
+
 
   return (
     <div className="min-h-screen bg-cream">
@@ -155,7 +159,7 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md border-b border-brown/20">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-display text-black tracking-wide">LEELA T</div>
+            <div className="text-2xl font-display text-black tracking-wide"> Leela Tejaswini Tikkisetty</div>
             <div className="hidden md:flex space-x-8">
               {[
                 { id: 'hero', label: 'Home' },
@@ -494,40 +498,85 @@ function App() {
               Credentials that reinforce day-to-day systems work.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {certifications.map((cert, index) => (
-              <div key={index} className="flex items-center bg-cream p-6 rounded-sm border border-brown/10 shadow-sm">
-                <Award className="w-6 h-6 text-brown mr-4" />
-                <span className="text-brown font-medium">{cert}</span>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-6 ">
+          {certifications.map((cert, index) => (
+            <a
+              key={index}
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center bg-cream p-6 rounded-sm border border-brown/10 shadow-sm hover:shadow-md transition cursor-pointer 
+                md:col-span-2 max-w-xl mx-auto"
+            >
+              <Award className="w-6 h-6 text-brown mr-4" />
+              <span className="text-brown font-medium underline underline-offset-4">
+                {cert.name}
+              </span>
+              <ExternalLink className="w-4 h-4 ml-3 text-brown" />
+            </a>
+          ))}
+
           </div>
         </div>
       </section>
 
-      {/* Education */}
-      <section id="education" className="py-24 bg-cream">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-display text-black mb-6 tracking-wide">EDUCATION</h2>
-            <div className="w-16 h-0.5 bg-brown mx-auto mb-6"></div>
-          </div>
-          <div className="bg-white p-8 rounded-sm shadow-sm border border-brown/10">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 className="text-2xl font-display text-black tracking-wide">San Francisco Bay University</h3>
-                <p className="text-brown font-medium">Master of Science · Computer Science</p>
-              </div>
-              <div className="text-sm text-brown/80 font-light mt-2 md:mt-0">
-                Fremont, CA · Apr 2024 – Dec 2025
-              </div>
+              
+              {/* Education */}
+        <section id="education" className="py-24 bg-cream">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-display text-black mb-6 tracking-wide">
+                EDUCATION
+              </h2>
+              <div className="w-16 h-0.5 bg-brown mx-auto"></div>
             </div>
-            <p className="text-brown leading-relaxed font-light">
-              Coursework blending distributed systems, cloud design, and analytics—reinforcing the infrastructure mindset I bring to support roles.
-            </p>
+
+            <div className="space-y-10">
+
+              {/* Masters */}
+              <div className="bg-white p-8 rounded-sm shadow-sm border border-brown/10">
+                <h3 className="text-2xl font-display text-black tracking-wide">
+                  San Francisco State University
+                </h3>
+
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-2">
+                  <p className="text-brown font-medium">
+                    Master of Science – Analytics
+                  </p>
+                  <p className="text-sm text-brown/80 font-light">
+                    San Francisco, CA · August 2023 – August 2025
+                  </p>
+                </div>
+
+                <p className="text-brown leading-relaxed font-light mt-4">
+                  Specialized in the theoretical and practical application of AI and Machine Learning, focusing on advanced statistical modeling, pattern recognition, and data mining. The curriculum emphasized transforming complex datasets into predictive insights and deploying intelligent analytical solutions.
+                </p>
+              </div>
+
+              {/* Bachelors */}
+              <div className="bg-white p-8 rounded-sm shadow-sm border border-brown/10">
+                <h3 className="text-2xl font-display text-black tracking-wide">
+                  Vignana Bharathi Institute of Technology
+                </h3>
+
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-2">
+                  <p className="text-brown font-medium">
+                    Bachelor of Technology – Computer Science
+                  </p>
+                  <p className="text-sm text-brown/80 font-light">
+                    Hyderabad, India · June 2015 – May 2019
+                  </p>
+                </div>
+
+                <p className="text-brown leading-relaxed font-light mt-4">
+                  Built a robust foundation in core computer science principles with a focus on scalable systems, including distributed computing and cloud architecture. Mastered software engineering fundamentals like object-oriented design, data structures, and algorithms essential for building production-level applications.
+                </p>
+              </div>
+
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-black text-white">
@@ -589,7 +638,8 @@ function App() {
       <footer className="bg-brown text-white/80 py-8">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="font-light tracking-wide">
-            © 2025 leela T . AI / ML Software Engineer
+          © 2025 Leela Tejaswini Tikkisetty · AI / ML Software Engineer
+
           </p>
         </div>
       </footer>
