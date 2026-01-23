@@ -227,9 +227,9 @@ const certifications = [
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16 text-center">
             {[
-              { label: 'UPTIME SUPPORTED', value: '99%+', detail: 'Global SaaS + Ops' },
-              { label: 'AUTOMATION IMPACT', value: '45%', detail: 'Tier-1 deflection' },
-              { label: 'TOOLKIT', value: 'Python · SQL · AWS', detail: 'ServiceNow · Splunk' }
+              { label: 'RELIABILITY', value: '99.9% Uptime', detail: 'High-Availability Distributed Systems' },
+              { label: 'PERFORMANCE', value: 'Low Latency', detail: 'Optimized Inference & Real-Time Pipelines' },
+              { label: 'TOOLKIT', value: 'Cloud Native', detail: 'AWS • Kubernetes • Docker • Terraform' }
             ].map((stat, index) => (
               <div key={index} className="bg-white p-6 rounded-sm shadow-sm border border-brown/10">
                 <div className="text-xs tracking-widest text-brown/70 mb-2">{stat.label}</div>
@@ -253,25 +253,25 @@ const certifications = [
           <div className="text-center mb-20">
             <h2 className="text-5xl font-display text-black mb-8 tracking-wide">SUMMARY</h2>
             <p className="text-lg text-brown max-w-3xl mx-auto font-light">
-              Tier-1/Tier-2 support specialist who blends automation, cloud awareness, and documentation discipline to keep hybrid environments healthy.
+              Specialized in bridging the gap between research prototypes and production reality. I architect scalable, cloud-native AI systems that prioritize low latency, high availability, and measurable business impact.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
                 icon: Target,
-                title: 'Incident Readiness',
-                detail: 'Designed low-latency inference pipelines, monitoring hooks, and automated alerts to keep ML services reliable in production.'
+                title: 'PRODUCTION AI',
+                detail: 'Deployed RAG-based chatbots and low latency inference pipelines monitoring hooks, and automated alerts to keep ML services reliable in production.'
               },
               {
                 icon: Rocket,
-                title: 'Automation Mindset',
-                detail: 'Automated data ingestion, model training, validation, and deployment workflows using Python, CI/CD, and cloud orchestration.'
+                title: 'SCALABLE INFRASTRUCTURE',
+                detail: 'Architected distributed microservices on cloud and reduced service latency. Worked cross-functionally with backend teams and product stakeholders to ship reliable AI systems'
               },
               {
                 icon: Lightbulb,
-                title: 'People-First Support',
-                detail: 'Worked cross-functionally with ML engineers, backend teams, and product stakeholders to ship reliable AI systems.'
+                title: 'AUTOMATION MINDSET',
+                detail: 'Automated data ingestion, model training, validation, and deployment workflows using Python, CI/CD, and cloud orchestration'
               }
             ].map((card, index) => (
               <div key={index} className="bg-cream p-8 rounded-sm shadow-sm border border-brown/10 text-center">
